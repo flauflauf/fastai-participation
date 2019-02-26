@@ -7,7 +7,7 @@
 - Deep learning, especially CNN, (only) works well on image input. But it is often possible to transform your data into images. Examples:
   - For bot detection: Draw an image of the mouse cursor trajectory. Use that as the data.
   - For cancer detection: Draw an image embedding of your DNA information. See https://towardsdatascience.com/the-mystery-of-the-origin-cancer-type-classification-using-fast-ai-libray-212eaf8d3f4e
-- Cyclical Learning Rates (CLR) work much better than traditional methods (constant, linearly or exponentially decreasing, decrease after plateau). Also, the optimal learning rate (range) can be approximated well by testing each LR with a single run, instead of performing an extensive grid search. See https://mlconf.com/interview-with-leslie-n-smith-phd-senior-research-scientist-at-the-us-naval-research-laboratory-by-reshama-shaikh-program-committee-member/
+- Cyclical Learning Rates (CLR) work much better than traditional methods (constant, linearly or exponentially decreasing, decrease after plateau). Also, the optimal learning rate (range) can be approximated well by testing each LR with a single run, instead of performing an extensive grid search. See https://mlconf.com/interview-with-leslie-n-smith-phd-senior-research-scientist-at-the-us-naval-research-laboratory-by-reshama-shaikh-program-committee-member/ and https://arxiv.org/pdf/1803.09820.pdf
 
 
 
