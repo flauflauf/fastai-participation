@@ -1,10 +1,10 @@
 - Trying out the exercises is always better than delving into the concepts
-- You can achieve almost state-of-the-art results on pretty much any image or text task by using a pretained model like ResNet34 and using transfer learning to the new task. You only and a couple hundred data points for this task. See https://arxiv.org/pdf/1801.06146.pdf.
-- You need a fast GPU to do deep learning, but not much more than that. Renting a preemtible server with a fast GPU on Google Cloud costs about 0.40$ an hour. If you stop the server outside your working hours (which you should!), that's only about 16$ for an entire work week. Since Google gives you a 300$ credit when you sign up, you can do deep learning for about four months for free.
+- You can achieve almost state-of-the-art results on pretty much any image or text task by using a pretained model like ResNet34 and using transfer learning to the new task. You only need a couple hundred data points for this task. See https://arxiv.org/pdf/1801.06146.pdf.
+- You need a fast GPU to do deep learning, but not more than that. Renting a preemtible server with a fast GPU on Google Cloud costs about 0.40$ an hour. If you stop the server outside your working hours (which you should!), that's only about 16$ for an entire work week. Since Google gives you a 300$ credit when you sign up, you can do deep learning for about four months for free.
 - Learning on the transfer data set is best done in two stages:
   1. Freeze the pretrained model and only train added layers using a large learning rate (e.g. ~1e-3).
   2. Unfreeze the model and train again using a range of smaller learning rates, e.g. \[1e-6,1e-4\], with one-cycle-fitting
-- Deep learning, especially CNN, (only) works on image input. But it is often possible to transform your data into images. Examples:
+- Deep learning, especially CNN, (only) works well on image input. But it is often possible to transform your data into images. Examples:
   - For bot detection: Draw an image of the mouse cursor trajectory. Use that as the data.
   - For cancer detection: Draw an image embedding of your DNA information. See https://towardsdatascience.com/the-mystery-of-the-origin-cancer-type-classification-using-fast-ai-libray-212eaf8d3f4e
 - Cyclical Learning Rates (CLR) work much better than traditional methods (constant, linearly or exponentially decreasing, decrease after plateau). Also, the optimal learning rate (range) can be approximated well by testing each LR with a single run, instead of performing an extensive grid search. See https://mlconf.com/interview-with-leslie-n-smith-phd-senior-research-scientist-at-the-us-naval-research-laboratory-by-reshama-shaikh-program-committee-member/
