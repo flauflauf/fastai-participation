@@ -26,3 +26,7 @@ _Storing FP16 (half precision) data compared to higher precision FP32 or FP64 re
 _..._
 
 _The new NVIDIA Tesla P100, powered by the GP100 GPU, can perform FP16 arithmetic at twice the throughput of FP32. The GP102 (Tesla P40 and NVIDIA Titan X), GP104 (Tesla P4), and GP106 GPUs all support instructions that can perform integer dot products on 2- and4-element 8-bit vectors, with accumulation into a 32-bit integer. These instructions are valuable for implementing high-efficiency deep learning inference, as well as other applications such as radio astronomy._
+
+# Tasks
+
+- Get insights into the layers like in https://arxiv.org/pdf/1311.2901.pdf. Possible candidate models: lesson-1 (pets), horse-vs-zebra
