@@ -8,6 +8,7 @@ RUN pip install -r requirements.txt
 
 COPY app app/
 
+#COPY horse-vs-zebra/models/stage-2.pth app/models/model.pth
 RUN python app/server.py
 
 EXPOSE 8080
