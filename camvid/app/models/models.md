@@ -1,0 +1,1 @@
+Put exported model in this folder as `camvid.pkl`. Will not be commited though.
