@@ -14,8 +14,13 @@ app = Starlette()
 app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_headers=['X-Requested-With', 'Content-Type'])
 app.mount('/static', StaticFiles(directory='app/static'))
 
+def acc_camvid(input, target):
+    target = target.squeeze(1)
+    mask = target != void_code
+    return (input.argmax(dim=1)[mask]==target[mask]).float().mean()
+
 async def setup_learner():
-    learn = load_learner(path/'models', 'planet.pkl')
+    learn = load_learner(path/'models', 'camvid.pkl')
     return learn
 
 loop = asyncio.get_event_loop()
