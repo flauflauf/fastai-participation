@@ -1,3 +1,5 @@
+# Deep Learning Course take-aways
+
 - Trying out the exercises is always better than delving into the concepts
 - You can achieve almost state-of-the-art results on pretty much any image or text task by using a pretained model like ResNet34 and using transfer learning to the new task. You only need a couple hundred data points for this task. See https://arxiv.org/pdf/1801.06146.pdf.
 - You need a fast GPU to do deep learning, but not more than that. Renting a preemtible server with a fast GPU on Google Cloud costs about 0.40$ an hour. If you stop the server outside your working hours (which you should!), that's only about 16$ for an entire work week. Since Google gives you a 300$ credit when you sign up, you can do deep learning for about four months for free.
@@ -8,8 +10,6 @@
   - For bot detection: Draw an image of the mouse cursor trajectory. Use that as the data.
   - For cancer detection: Draw an image embedding of your DNA information. See https://towardsdatascience.com/the-mystery-of-the-origin-cancer-type-classification-using-fast-ai-libray-212eaf8d3f4e
 - Cyclical Learning Rates (CLR) work much better than traditional methods (constant, linearly or exponentially decreasing, decrease after plateau). Also, the optimal learning rate (range) can be approximated well by testing each LR with a single run, instead of performing an extensive grid search. See https://mlconf.com/interview-with-leslie-n-smith-phd-senior-research-scientist-at-the-us-naval-research-laboratory-by-reshama-shaikh-program-committee-member/ and https://arxiv.org/pdf/1803.09820.pdf
-
-
 
 # Arithmetic precision
 Neural networks can in many cases be used and even trained using low-precision arithmetic, e.g. 16 bit
@@ -30,3 +30,12 @@ _The new NVIDIA Tesla P100, powered by the GP100 GPU, can perform FP16 arithmeti
 # Tasks
 
 - Get insights into the layers like in https://arxiv.org/pdf/1311.2901.pdf. Possible candidate models: lesson-1 (pets), horse-vs-zebra
+
+# Own observations
+
+## Batch size
+Even though a maximal batch size leads to global optima for convex (!) problems, a lower batch size generally yields higher accuracy for neural networks
+
+- https://medium.com/mini-distill/effect-of-batch-size-on-training-dynamics-21c14f7a716e
+- https://twitter.com/ylecun/status/989610208497360896?lang=en
+- https://forums.fast.ai/t/difference-in-batchsize-and-effect-on-training/52341/2 (careful: some stuff seems wrognly generalized from convex problems)
